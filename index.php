@@ -24,8 +24,11 @@ require 'Controladores/filtros.php';
                 <label for="industry">Industry:</label>
                 <input type="text" id="industry" name="industry" value="<?= htmlspecialchars($industry) ?>">
                 <button type="submit">Filtrar</button>
-                <a href="index.php" class="btn btn-secondary">Resetear</a>
+                <button><a href="index.php" class="btn btn-secondary">Resetear</a></button>
                 <button type="submit" formaction="Controladores/export_csv.php">Submit</button>
+            </form>
+            <form method="post" action="Controladores/export_csv.php">
+                <button type="submit" name="export_csv">Submit</button>
             </form>
         </div>
 

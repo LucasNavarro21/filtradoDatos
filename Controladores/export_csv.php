@@ -45,5 +45,15 @@ if ($result->num_rows > 0) {
     }
 }
 fclose($output);
+
+// Enviar correo electrónico
+$to = 'luketexchingewuey@gmail.com';
+$subject = 'Nueva descarga de leads';
+$message = 'Se ha realizado una nueva descarga de leads.';
+$headers = 'From: navarrolucas4668@gmail.com' . "\r\n" .
+           'Reply-To: navarrolucas4668@gmail.com' . "\r\n" .
+           'X-Mailer: PHP/' . phpversion();
+mail($to, $subject, $message, $headers);
+
 $conn->close();
 ?>
